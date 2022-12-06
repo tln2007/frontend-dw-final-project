@@ -29,8 +29,9 @@ function UserProfilePage({ isLoading, isLoggedIn, userInformation, setIsLoggedIn
             <div className="UserPageWrapper">
                 <h1>User Profile</h1>
                 <p>
-                    <strong>Display Name: </strong>
-                    {userInformation.displayName}
+                    <strong>
+                        {userInformation.displayName}'s Bakery
+                    </strong>
                 </p>
                 <p>
                     <strong>Email: </strong>

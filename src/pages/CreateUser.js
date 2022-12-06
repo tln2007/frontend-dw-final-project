@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import CreateUserForm from "../components/CreateUserForm";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
@@ -19,26 +19,36 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
             // Assign Email and Password to variable from form
             const email = e.currentTarget.email.value;
             const password = e.currentTarget.password.value;
+            const displayName = e.currentTarget.displayName.value;
 
-            console.log({email, password});
             const auth = getAuth();
 
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     const user = userCredential.user;
                     setIsLoggedIn(true);
-                    setUserInformation({
-                        email: user.email,
-                        displayName: user.displayName,
-                        uid: user.uid,
-                        accessToken: user.accessToken,
-                    });
                     setErrors();
+
+                    updateProfile(user, { displayName: displayName })
+                        .then(() => {
+                            setUserInformation({
+                                email: user.email,
+                                displayName: displayName,
+                                uid: user.uid,
+                                accessToken: user.accessToken,
+                            });
+                        })
+                        .catch((err) => {
+                            const errorCode = err.code;
+                            const errorMessage = err.message;
+                            console.warn({err, errorCode, errorMessage});
+                            setErrors(errorMessage);
+                        });
                 })
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    console.warn({error, errorCode, errorMessage});
+                    console.warn({ error, errorCode, errorMessage });
                     setErrors(errorMessage);
                 });
         },
