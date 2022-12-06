@@ -1,0 +1,11 @@
+.LoginWrapper, .CreatePageWrapper{
+    align: center;
+    max-width: 400px;
+    
+}
+
+
+.FormElement {
+    display: flex;
+    flex-direction: column;
+}
