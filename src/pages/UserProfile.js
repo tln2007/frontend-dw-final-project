@@ -33,10 +33,10 @@ function UserProfilePage({ isLoading, isLoggedIn, userInformation, setIsLoggedIn
                         {userInformation.displayName}'s Bakery
                     </strong>
                 </p>
-                <p>
+                {/* <p>
                     <strong>Email: </strong>
                     {userInformation.email}
-                </p>
+                </p> */}
             </div>
             <header>
                 {isLoggedIn && <p onClick={() => logout()}><Link to="/">Log Out</Link></p>}

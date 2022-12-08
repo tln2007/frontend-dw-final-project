@@ -10,6 +10,7 @@ import './App.css';
 import CreateUserPage from './pages/CreateUser';
 import LoginPage from './pages/Login';
 import UserProfilePage from './pages/UserProfile';
+import DashboardPage from './pages/Dashboard';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDTaYdK3bLiYYZhobXPv3ZdVqeIpXqt5zk",
@@ -59,6 +60,16 @@ function App() {
             setIsLoggedIn={setIsLoggedIn} 
             setUserInformation={setUserInformation} />
         ),
+    },
+    {
+      path: "/dashboard",
+      element: (
+        <DashboardPage 
+          isLoading={isLoading}
+          isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn} 
+          setUserInformation={setUserInformation} />
+      ),
     },
   ]);
   //ensure app is initialized when it is ready to be

@@ -9,7 +9,7 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(isLoggedIn) navigate("/");
+        if(isLoggedIn) navigate("/dashboard");
     }, [isLoggedIn, navigate]);
 
     const loginUser = useCallback((e) => {
