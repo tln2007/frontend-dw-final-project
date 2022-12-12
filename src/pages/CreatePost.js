@@ -14,7 +14,7 @@ function CreatePostPage({
     userInformation,
 }) {
     const [postSuccessful, setPostSuccessful] = useState(false);
-    const navigate = userNavigate();
+    const navigate = useNavigate();
 
     const createPost = useCallback(
         async (e) => {
@@ -60,5 +60,6 @@ function CreatePostPage({
         <>
         </>
     )
-    )
 }
+
+export default CreatePostPage;

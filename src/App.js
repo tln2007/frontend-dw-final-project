@@ -11,6 +11,7 @@ import CreateUserPage from './pages/CreateUser';
 import LoginPage from './pages/Login';
 import UserProfilePage from './pages/UserProfile';
 import DashboardPage from './pages/Dashboard';
+import CreatePostPage from "./pages/CreatePost";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDTaYdK3bLiYYZhobXPv3ZdVqeIpXqt5zk",
@@ -27,12 +28,34 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInformation, setUserInformation] = useState({});
 
+  useEffect(() => {
+    // Initialize firebase
+    const app = initializeApp(firebaseConfig);
+    setAppInitialized(app);
+  }, []);
+  // check if user is logged in
+  useEffect(() => {
+    if (appInitialized) {
+      const auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          setUserInformation(user);
+          setIsLoggedIn(true)
+        } else {
+          setUserInformation({});
+          setIsLoggedIn(false);
+        }
+        setIsLoading(false);
+      });
+    }
+  }, [appInitialized]);
+
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <DashboardPage
-        app= 
+          app={appInitialized}
           isLoading={isLoading} 
           isLoggedIn={isLoggedIn} 
           userInformation={userInformation}
