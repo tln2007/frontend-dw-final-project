@@ -31,7 +31,8 @@ function App() {
     {
       path: "/",
       element: (
-        <UserProfilePage 
+        <DashboardPage
+        app= 
           isLoading={isLoading} 
           isLoggedIn={isLoggedIn} 
           userInformation={userInformation}
@@ -67,6 +68,28 @@ function App() {
         <DashboardPage 
           isLoading={isLoading}
           isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn} 
+          setUserInformation={setUserInformation} />
+      ),
+    },
+    {
+      path: "/user/:id",
+      element: (
+        <UserProfilePage
+          isLoading={isLoading}
+          isLoggedIn={isLoggedIn}
+          userInformation={userInformation}
+          setIsLoggedIn={setIsLoggedIn} 
+          setUserInformation={setUserInformation} />
+      ),
+    },
+    {
+      path: "/create-post",
+      element: (
+        <CreatePostPage
+          isLoading={isLoading}
+          isLoggedIn={isLoggedIn}
+          userInformation={userInformation}
           setIsLoggedIn={setIsLoggedIn} 
           setUserInformation={setUserInformation} />
       ),
