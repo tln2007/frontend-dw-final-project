@@ -38,11 +38,11 @@ function DashboardPage({
 
     return (
         <>
-            <Header>
+            <Header
                 isLoggedIn={isLoggedIn}
                 setLoggedIn={setLoggedIn}
                 setUserInformation={setUserInformation}
-            </Header>
+            />
             <div className="PageWrapper">
                 <div className="ImagePostWrapper">
                     {postData && postData.map((post) => (

@@ -14,7 +14,7 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                 console.warn(error);
             });
     }
-
+    console.log(isLoggedIn)
     return (
         <header>
             <nav>

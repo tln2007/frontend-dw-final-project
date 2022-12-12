@@ -13,11 +13,9 @@ function CreatePostPage({
     setUserInformation, 
     userInformation,
 }) {
-    const [postSuccessful, setPostSuccessful] = useState(false);
     const navigate = useNavigate();
 
-    const createPost = useCallback(
-        async (e) => {
+    const createPost = useCallback((e) => {
             e.preventDefault();
             const db = getFirestore(app);
             const storage = getStorage();
@@ -36,7 +34,7 @@ function CreatePostPage({
             const userId = userInformation.uid;
 
             try {
-                const docRef = await addDoc(collection(db, "posts"), {
+                const docRef = addDoc(collection(db, "posts"), {
                     caption,
                     imageAlt,
                     imageUrl,

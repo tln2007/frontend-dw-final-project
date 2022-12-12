@@ -28,6 +28,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInformation, setUserInformation] = useState({});
 
+  console.log(isLoggedIn);
   useEffect(() => {
     // Initialize firebase
     const app = initializeApp(firebaseConfig);
@@ -84,16 +85,6 @@ function App() {
             setIsLoggedIn={setIsLoggedIn} 
             setUserInformation={setUserInformation} />
         ),
-    },
-    {
-      path: "/dashboard",
-      element: (
-        <DashboardPage 
-          isLoading={isLoading}
-          isLoggedIn={isLoggedIn}
-          setIsLoggedIn={setIsLoggedIn} 
-          setUserInformation={setUserInformation} />
-      ),
     },
     {
       path: "/user/:id",

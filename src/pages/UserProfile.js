@@ -38,9 +38,6 @@ function UserProfilePage({ isLoading, isLoggedIn, userInformation, setIsLoggedIn
                     {userInformation.email}
                 </p> */}
             </div>
-            <header>
-                {isLoggedIn && <p onClick={() => logout()}><Link to="/">Log Out</Link></p>}
-            </header>
         </>
     );
 }
