@@ -29,15 +29,18 @@ function CreatePostPage({
             });
 
             const caption = e.currentTarget.caption.value;
-            const imageAlt = e.currentTarget.imageAlt.value;
+            //const imageAlt = e.currentTarget.imageAlt.value;
             const userName = userInformation.displayName;
             const userId = userInformation.uid;
 
             try {
                 const docRef = addDoc(collection(db, "posts"), {
-                    caption,
                     imageAlt,
                     imageUrl,
+                    ingredients, 
+                    instructions, 
+                    servings, 
+                    title,
                     userId: userId,
                     userName,
                 });

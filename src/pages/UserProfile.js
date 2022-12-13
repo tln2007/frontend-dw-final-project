@@ -33,10 +33,6 @@ function UserProfilePage({ isLoading, isLoggedIn, userInformation, setIsLoggedIn
                         {userInformation.displayName}'s Bakery
                     </strong>
                 </p>
-                {/* <p>
-                    <strong>Email: </strong>
-                    {userInformation.email}
-                </p> */}
             </div>
         </>
     );

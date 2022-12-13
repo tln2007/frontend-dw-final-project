@@ -74,7 +74,7 @@ function App() {
             setIsLoggedIn={setIsLoggedIn} 
             setUserInformation={setUserInformation}
           />
-        ),//prop isLoggedIn tells us if false, go to login or create, if true, go to user profile
+        ),// prop isLoggedIn tells us if false, go to login or create, if true, go to user profile
     },
     {
         path: "/create",

@@ -43,15 +43,21 @@ function DashboardPage({
                 setLoggedIn={setLoggedIn}
                 setUserInformation={setUserInformation}
             />
+          
             <div className="PageWrapper">
                 <div className="ImagePostWrapper">
                     {postData && postData.map((post) => (
                         <ImagePost
-                        caption={post.caption}
+    
                         imageAlt={post.imageAlt}
                         imageUrl={post.imageUrl}
+                        ingredients={post.ingredients}
+                        instructions={post.instructions}
+                        servings={post.servings}
+                        title={post.title}
                         userId={post.userId}
                         userName={post.userName}
+
                     />
                     ))}
                  
