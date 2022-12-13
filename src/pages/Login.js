@@ -3,6 +3,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
+import bakery from "./public/assets/bakery.png";
 
 function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     const [errors, setErrors] = useState();
@@ -50,6 +51,7 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                 <p>
                     <Link to="/create">Create Account</Link>
                 </p>
+                <img src={bakery} alt="sugarcoded bakery"></img>
             </div>
         </>
     );
