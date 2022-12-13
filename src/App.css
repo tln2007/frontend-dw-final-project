@@ -24,10 +24,16 @@ input[type=password] {
 }
 
 .Navbar {
-    background-color: yellow;
+    background-color: rgb(173, 86, 86);
     display: flex;
     align-content:flex-start;
+
+}
+
+.Navbar a {
+    margin: 15px;
     text-decoration: none;
+    
 }
 
 
@@ -39,4 +45,8 @@ input[type=password] {
 .FormElement {
     display: flex;
     flex-direction: column;
+}
+
+.PageWrapper {
+    margin: 10%;
 }
