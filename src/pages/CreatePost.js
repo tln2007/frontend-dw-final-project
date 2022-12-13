@@ -14,29 +14,21 @@ function CreatePostPage({
     userInformation,
 }) {
     const navigate = useNavigate();
+    const [postSuccessful, setPostSuccessful] = useState(false);
 
     const createPost = useCallback((e) => {
             e.preventDefault();
             const db = getFirestore(app);
-            const storage = getStorage();
 
-            const imageToUpload= e.currentTarget.imageToUpload.files;
-            console.log({imageToUpload})
-            const imageRef = ref(storage, '.jpg');
-
-            uploadBytes(imageRef, file).then((snapshot) => {
-                console.logo("upload a file!", snapshot)
-            });
-
-            const caption = e.currentTarget.caption.value;
-            //const imageAlt = e.currentTarget.imageAlt.value;
+            const ingredients = e.currentTarget.ingredients.value;
+            const instructions = e.currentTarget.instructions.value;
+            const servings = e.currentTarget.servings.value;
+            const title = e.currentTarget.title.value;
             const userName = userInformation.displayName;
             const userId = userInformation.uid;
 
             try {
                 const docRef = addDoc(collection(db, "posts"), {
-                    imageAlt,
-                    imageUrl,
                     ingredients, 
                     instructions, 
                     servings, 
@@ -59,6 +51,16 @@ function CreatePostPage({
 
     return (
         <>
+            <div className='CreatePostWrapper'>
+                <Header
+                    isLoggedIn={isLoggedIn}
+                    setLoggedIn={setLoggedIn}
+                    setUserInformation={setUserInformation}
+                />
+                <h1>Create Post</h1>
+                <CreatePostForm createPost={createPost}/>
+                
+            </div>
         </>
     )
 }

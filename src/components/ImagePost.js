@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ImagePost({ imageAlt, imageSrc, ingredients, instructions, servings, title, userName, userId }) {
+function ImagePost({ ingredients, instructions, servings, title, userName, userId }) {
     return (
         <div className="ImagePost">
-            <img src={imageSrc} alt={imageAlt} />
             <div className="ImagePostText">
-                <p className="Title">{title}</p>
+                <h1 className="Title">{title}</h1>
+                <p className="Ingredients">{ingredients}</p>
+                <p className="Instructions">{instructions}</p>
+                <p className="Servings">{servings}</p>
                 <p>
                     Posted by: <Link to={`user/${userId}`}>{userName}</Link>
                 </p>

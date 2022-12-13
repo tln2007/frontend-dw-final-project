@@ -1,7 +1,33 @@
-.LoginWrapper, .CreatePageWrapper{
-    align: center;
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Josefin+Sans:wght@500&family=Mountains+of+Christmas:wght@700&display=swap');
+
+.LoginWrapper h1 {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.LoginWrapper, .CreatePageWrapper {
     max-width: 400px;
     
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+
+.LogoWrapper img {
+    height: auto;
+    width: 100%;
 }
 
 .FormElement {

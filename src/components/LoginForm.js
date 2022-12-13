@@ -3,11 +3,9 @@ import React from "react";
 function LoginForm({ loginUser }) {
     return (
         <form className="FormElement" onSubmit={(e) => loginUser(e)}>
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" />
-
-            <label htmlFor="password">Password</label>
-            <input type="password" name="password" />
+            
+            <input type="text" name="email" placeholder="Email"/>
+            <input type="password" name="password" placeholder="Password" />
 
             <div className="ButtonWrapper">
                 <button type="submit">Submit</button>

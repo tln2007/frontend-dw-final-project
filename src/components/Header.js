@@ -27,6 +27,12 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                 {!isLoggedIn && <Link to="/create">
                     <p>Create User</p>
                 </Link>}
+                {isLoggedIn && <Link to="/create-post">
+                    <p>Create Post</p>
+                </Link>}
+                {isLoggedIn && <Link to="//user/:id">
+                    <p>My Profile</p>
+                </Link>}
                 {isLoggedIn && <p onClick={() => logout()}><Link>Log Out</Link></p>}
             </nav>
         </header>

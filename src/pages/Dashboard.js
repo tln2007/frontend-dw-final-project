@@ -48,9 +48,6 @@ function DashboardPage({
                 <div className="ImagePostWrapper">
                     {postData && postData.map((post) => (
                         <ImagePost
-    
-                        imageAlt={post.imageAlt}
-                        imageUrl={post.imageUrl}
                         ingredients={post.ingredients}
                         instructions={post.instructions}
                         servings={post.servings}
