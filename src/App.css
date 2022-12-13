@@ -23,6 +23,12 @@ input[type=password] {
     box-sizing: border-box;
 }
 
+.Navbar {
+    background-color: yellow;
+    display: flex;
+    align-content:flex-start;
+    text-decoration: none;
+}
 
 
 .LogoWrapper img {

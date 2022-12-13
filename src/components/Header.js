@@ -17,7 +17,7 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     console.log(isLoggedIn)
     return (
         <header>
-            <nav>
+            <nav className='Navbar'>
                 {isLoggedIn && <Link to="/">
                     <p>Home</p>
                 </Link>}
