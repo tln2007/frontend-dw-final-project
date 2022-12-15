@@ -4,19 +4,15 @@ import React from "react";
 function CreatePostForm({ createPost }) {
     return (
         <form className="FormElement" onSubmit={(e) => createPost(e)}>
-            <label htmlFor="title">Name of Recipe</label>
-            <input type="text" name="title" />
-            <label htmlFor="ingredients">Ingredients</label>
-            <input type="text" name="ingredients" />
-            <label htmlFor="instructions">Instructions</label>
-            <input type="text" name="instructions" />
-            <label htmlFor="servings">Servings</label>
-            <input type="text" name="servings" />
+            <input type="text" name="title" placeholder="Name of Recipe"/>
+            <input type="text" name="ingredients" placeholder="Ingredients"/>
+            <input type="text" name="instructions" placeholder="Instructions"/>
+            <input type="text" name="servings" placeholder="Servings"/>
             
 
-            <div className="ButtonWrapper">
+            <div className="PostButtonWrapper">
                 <button type="submit" className="Button">
-                    Submit
+                    Post
                 </button>
             </div>
         </form>

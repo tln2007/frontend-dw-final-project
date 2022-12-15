@@ -8,7 +8,7 @@ function CreateUserForm({ signUpUser }) {
             <input type="text" name="password" placeholder="Password"/>
 
             <div className="CreateButtonWrapper">
-                <button type="submit">Submit</button>
+                <button type="submit">Sign Up</button>
             </div>
         </form>
     );

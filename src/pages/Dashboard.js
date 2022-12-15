@@ -38,6 +38,7 @@ function DashboardPage({
 
     return (
         <>
+        <div className="Homepage">
             <Header
                 isLoggedIn={isLoggedIn}
                 setLoggedIn={setLoggedIn}
@@ -60,6 +61,7 @@ function DashboardPage({
                  
                 </div>
             </div>
+        </div>
         </>
     );
 }

@@ -50,6 +50,7 @@ function CreatePostPage({
 
     return (
         <>
+        <div className="CreatePostPage">
             <div className='CreatePostWrapper'>
                 <Header
                     isLoggedIn={isLoggedIn}
@@ -60,6 +61,7 @@ function CreatePostPage({
                 <CreatePostForm createPost={createPost}/>
                 
             </div>
+        </div>
         </>
     )
 }
