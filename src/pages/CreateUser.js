@@ -4,6 +4,7 @@ import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase
 import CreateUserForm from "../components/CreateUserForm";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
+import bakery from "../images/bakery.png";
 
 function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     const [errors, setErrors] = useState();
@@ -57,16 +58,20 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
 
     return (
         <>
+        <div className='CreatePage'>
             <div className='CreatePageWrapper'>
-                
-                <h1>Create User</h1>
-                <CreateUserForm signUpUser={signUpUser}/>
-                <p>{errors}</p>
-                <p>Already have an account?</p>
-                <p>
-                    <Link to="/login">Login</Link>
-                </p>
+                <div className='LogoItem'>
+                    <img src={bakery} alt="sugarcoded bakery"></img>
+                </div>
+                <div className='CreateUserItems'>
+                    <h1>Sign Up</h1>
+                    <CreateUserForm signUpUser={signUpUser}/>
+                    <p>{errors}</p>
+                    <p><strong>Already have an account?</strong></p>
+                    <p><Link to="/login">Login</Link></p>
+                </div>
             </div>
+        </div>
         </>
     );
 }
