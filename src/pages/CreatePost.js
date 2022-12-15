@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { getStorage, ref, uploadBytes } from "firebase/storage";
 import Header from "../components/Header";
 import CreatePostForm from "../components/CreatePostForm";
 
@@ -14,7 +13,7 @@ function CreatePostPage({
     userInformation,
 }) {
     const navigate = useNavigate();
-    const [postSuccessful, setPostSuccessful] = useState(false);
+    const [setPostSuccessful] = useState(false);
 
     const createPost = useCallback((e) => {
             e.preventDefault();
@@ -42,7 +41,7 @@ function CreatePostPage({
                 console.error("Error adding document: ", e);     
             }
         },
-        [app, userInformation]
+        [setPostSuccessful, app, userInformation]
     );
     console.log({ userInformation });
     useEffect(() => {

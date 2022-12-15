@@ -1,20 +1,20 @@
 import React, {useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getFirestore, collection, getDocs, QuerySnapshot } from "firebase/firestore";
+//import { getFirestore, collection, getDocs } from "firebase/firestore";
 import ImagePost from "../components//ImagePost";
 import Header from "../components/Header";
 
-const queryData = async (app) => {
-    if (!app) return [];
-    const db = getFirestore(app);
-    const querySnapshot = await getDocs(collection(db, "posts"));
-    const data = [];
-    querySnapshot.forEach((doc) => {
-        data.push(doc.data());
-    });
-    return data;
+// const queryData = async (app) => {
+//     if (!app) return [];
+//     const db = getFirestore(app);
+//     const querySnapshot = await getDocs(collection(db, "posts"));
+//     const data = [];
+//     querySnapshot.forEach((doc) => {
+//         data.push(doc.data());
+//     });
+//     return data;
 
-};
+// };
 
 function DashboardPage({
     app,
@@ -24,7 +24,7 @@ function DashboardPage({
     setUserInformation,
 }) {
     const navigate = useNavigate();
-    const [postData, setPostData] = useState([]);
+    const [postData] = useState([]);
 
     useEffect(() => {
         if (!isLoggedIn && !isLoading) navigate("/login");
@@ -32,7 +32,7 @@ function DashboardPage({
 
     useEffect(() => {
         if (!app) return;
-        const data = queryData(app).then(setPostData);
+        
 
     }, [app]);
 
