@@ -44,17 +44,18 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     return (
         <>
             <div className='LoginWrapper'>
-                <h1>Log In</h1>
-                <LoginForm loginUser={loginUser}/>
-                <p>{errors}</p>
-                <strong>Don't have an account?</strong>
-                <p>
-                    <Link to="/create">Create Account</Link>
-                </p>
-                <div className='LogoWrapper'>
+                <div className='LogoItem'>
                     <img src={bakery} alt="sugarcoded bakery"></img>
                 </div>
+                <div className='LoginItem'>
+                    <h1>Log In</h1>
+                    <LoginForm loginUser={loginUser}/>
+                    <p>{errors}</p>
+                    <strong>Don't have an account?</strong>
+                    <p><Link to="/create">Create Account</Link></p>
+                </div>
             </div>
+          
         </>
     );
 }

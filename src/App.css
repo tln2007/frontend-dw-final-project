@@ -4,10 +4,32 @@
     font-family: 'Berkshire Swash', cursive;
 }
 
-.LoginWrapper, .CreatePageWrapper {
-    max-width: 400px;
+.LoginWrapper {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+   
+}
+
+.LoginItem {
+    padding: 50px;
+    width: 1200px;
+}
+
+.LogoItem {
+    margin: 0;
     
 }
+
+.LogoItem img {
+    height: auto;
+
+    
+    width: 100%;
+}
+
 
 input[type=text] {
     width: 100%;
