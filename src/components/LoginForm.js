@@ -7,8 +7,8 @@ function LoginForm({ loginUser }) {
             <input type="text" name="email" placeholder="Email"/>
             <input type="password" name="password" placeholder="Password" />
 
-            <div className="ButtonWrapper">
-                <button type="submit">Submit</button>
+            <div className="buttonWrapper">
+                <button type="submit">Log In</button>
             </div>
         </form>
     );
