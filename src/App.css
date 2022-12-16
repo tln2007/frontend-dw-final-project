@@ -6,9 +6,9 @@
     min-height: 100vh;
 }
 
-.Homepage, .CreatePostPage {
+.Homepage, .CreatePostPage, .UserPage {
     background-color: #FFB8D1;
-    min-height: 120vh;
+    min-height: 500vh;
 }
 
 .LoginWrapper {
@@ -77,21 +77,21 @@
 }
 
 input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
     border: 3px solid #8C4646;
     border-radius: 6px;
     box-sizing: border-box;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
 }
 
 input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
     border: 3px solid #8C4646;
     border-radius: 6px;
     box-sizing: border-box;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
 }
 
 .buttonWrapper {
@@ -175,7 +175,6 @@ input[type=password] {
     
 }
 
-
 .LogoWrapper img {
     height: auto;
     width: 100%;
@@ -188,4 +187,23 @@ input[type=password] {
 
 .PageWrapper {
     margin: 10%;
+}
+
+.ImagePostWrapper {
+    background-color: aquamarine;
+    
+}
+
+.ImagePostText h1 {
+    color: white;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 50px;
+    text-shadow: 2px 2px #40121D;
+}
+
+.UserPage h1 {
+    color: white;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 50px;
+    text-shadow: 2px 2px #40121D;
 }

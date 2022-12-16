@@ -13,7 +13,6 @@ const queryData = async (app) => {
         data.push(doc.data());
     });
     return data;
-
 };
 
 function DashboardPage({
@@ -33,7 +32,6 @@ function DashboardPage({
     useEffect(() => {
         if (!app) return;
         queryData(app).then(setPostData);
-
     }, [app]);
 
     return (
@@ -55,8 +53,7 @@ function DashboardPage({
                         title={post.title}
                         userId={post.userId}
                         userName={post.userName}
-
-                    />
+                        />
                     ))}
                  
                 </div>

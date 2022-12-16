@@ -30,11 +30,10 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                 {isLoggedIn && <Link to="/create-post">
                     <p>Create Post</p>
                 </Link>}
-                {isLoggedIn && <Link to="//user/:id">
+                {isLoggedIn && <Link to="/user/:id">
                     <p>Profile</p>
                 </Link>}
-                {isLoggedIn && <p onClick={() => logout()}><Link to="/login">Log Out</Link></p>}
-                {/* {isLoggedIn && <p onClick={() => logout()}><Link>Log Out</Link></p>} */}
+                {isLoggedIn && <p onClick={() => logout()}><Link>Log Out</Link></p>}
             </nav>
         </header>
     );
