@@ -190,8 +190,8 @@ input[type=password] {
 }
 
 .ImagePostWrapper {
-    background-color: aquamarine;
-    
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
 }
 
 .ImagePostText h1 {

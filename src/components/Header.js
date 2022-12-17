@@ -31,7 +31,7 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                     <p>Create Post</p>
                 </Link>}
                 {isLoggedIn && <Link to="/user/:id">
-                    <p>Profile</p>
+                    <p>My Profile</p>
                 </Link>}
                 {isLoggedIn && <p onClick={() => logout()}><Link>Log Out</Link></p>}
             </nav>
