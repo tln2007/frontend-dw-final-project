@@ -8,7 +8,7 @@ import { getAuth, signOut } from "firebase/auth";
 function UserProfilePage({ isLoading, isLoggedIn, userInformation, setIsLoggedIn, setUserInformation }) {
     const navigate = useNavigate();
 
-    //function logout() {
+    function logout() {
         const auth = getAuth();
         signOut(auth)
             .then(() => {
@@ -18,7 +18,7 @@ function UserProfilePage({ isLoading, isLoggedIn, userInformation, setIsLoggedIn
             .catch((error) => {
                 console.warn(error);
             });
-   //}
+   }
     
     useEffect(() => {
         if(!isLoggedIn && !isLoading) return navigate('/login'); //if NOT logged in, nav to login

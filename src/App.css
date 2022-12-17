@@ -11,6 +11,7 @@
     min-height: 500vh;
 }
 
+
 .LoginWrapper {
     display: flex;
     flex-wrap: row wrap;
@@ -123,8 +124,12 @@ input[type=password] {
     color: white;
     font-family: 'Berkshire Swash', cursive;
     font-size: 50px;
-    text-align: center;
     text-shadow: 2px 2px #40121D;
+    
+}
+
+.CreatePostWrapper {
+    margin: 20px;
 }
 
 .CreateButtonWrapper {
@@ -159,7 +164,7 @@ input[type=password] {
     color: white;
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
-    width: 100%;
+    width: 100px;
 }
 .Navbar {
     display: flex;
@@ -180,10 +185,6 @@ input[type=password] {
     width: 100%;
 }
 
-.FormElement {
-    display: flex;
-    flex-direction: column;
-}
 
 .PageWrapper {
     margin: 10%;
@@ -206,4 +207,24 @@ input[type=password] {
     font-family: 'Berkshire Swash', cursive;
     font-size: 50px;
     text-shadow: 2px 2px #40121D;
+}
+
+.TitleWrapper {
+    width: 500px;
+}
+
+.IngredientsWrapper input[type=text] {
+    height: 250px;
+    width: 500px;
+ 
+}
+
+.InstructionsWrapper input[type=text] {
+    height: 400px;
+    width: 500px;
+ 
+}
+
+.ServingsWrapper {
+    width: 100px;
 }
