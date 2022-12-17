@@ -27,7 +27,7 @@ function CreatePostPage({
             const userId = userInformation.uid;
 
             try {
-                const docRef = addDoc(collection(db, "posts"), {
+                addDoc(collection(db, "posts"), {
                     ingredients, 
                     instructions, 
                     servings, 

@@ -10,6 +10,7 @@ function UserProfilePage({ app, isLoading, isLoggedIn, userInformation, setIsLog
     const navigate = useNavigate();
     const [postData, setPostData] = useState([]);
 
+    // eslint-disable-next-line
     const queryData = async (app) => {
         if (!app) return [];
         const db = getFirestore(app);
@@ -41,8 +42,7 @@ function UserProfilePage({ app, isLoading, isLoggedIn, userInformation, setIsLog
                 setIsLoggedIn={setIsLoggedIn}
                 setUserInformation={setUserInformation}
             />
-               
-                
+
                 <div className='BakeryName'>
                     <strong>{userInformation.displayName}'s Bakery</strong>
                     <h2>Posts</h2>
