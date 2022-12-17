@@ -18,9 +18,9 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     return (
         <header>
             <nav className='Navbar'>
-                {/* {isLoggedIn && <Link to="/">
+                {isLoggedIn && <Link to="/">
                     <p>Home</p>
-                </Link>} */}
+                </Link>}
                 {!isLoggedIn && <Link to="/login">
                     <p>Login</p>
                 </Link>}
@@ -33,7 +33,7 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                 {isLoggedIn && <Link to="/user/:id">
                     <p>My Profile</p>
                 </Link>}
-                {isLoggedIn && <p onClick={() => logout()}><Link>Log Out</Link></p>}
+                {isLoggedIn && <p onClick={() => logout()}>Log Out</p>}
             </nav>
         </header>
     );

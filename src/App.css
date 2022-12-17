@@ -129,7 +129,8 @@ input[type=password] {
 }
 
 .CreatePostWrapper {
-    margin: 20px;
+    margin: 0 10%;
+    
 }
 
 .CreateButtonWrapper {
@@ -168,17 +169,19 @@ input[type=password] {
 }
 .Navbar {
     display: flex;
-    margin: 0;
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
-    
+    margin: 0;
 }
 
-.Navbar a {
-    margin: 15px;
-    text-decoration: none;
-    
+.Navbar p {
+    color: #40121D;;
+    cursor: pointer;
+    margin: 20px;
+    padding: 0;
 }
+
+a:link { text-decoration: none; }
 
 .LogoWrapper img {
     height: auto;
@@ -187,7 +190,7 @@ input[type=password] {
 
 
 .PageWrapper {
-    margin: 10%;
+    margin: 0 10%;
 }
 
 .ImagePostWrapper {
@@ -200,6 +203,19 @@ input[type=password] {
     font-family: 'Berkshire Swash', cursive;
     font-size: 50px;
     text-shadow: 2px 2px #40121D;
+}
+
+.MyPosts {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    margin: 0 10%;
+}
+
+.UserPage h2 {
+    color: #40121D ;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
 }
 
 .UserPage h1 {
@@ -215,16 +231,23 @@ input[type=password] {
 
 .IngredientsWrapper input[type=text] {
     height: 250px;
-    width: 500px;
+    width: 800px;
  
 }
 
 .InstructionsWrapper input[type=text] {
     height: 400px;
-    width: 500px;
- 
+    width: 800px;
 }
 
 .ServingsWrapper {
     width: 100px;
+}
+
+.BakeryName {
+    color: #40121D;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px white;
 }

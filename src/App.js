@@ -90,6 +90,7 @@ function App() {
       path: "/user/:id",
       element: (
         <UserProfilePage
+        app={appInitialized}
           isLoading={isLoading}
           isLoggedIn={isLoggedIn}
           userInformation={userInformation}

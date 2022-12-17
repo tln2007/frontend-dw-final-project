@@ -13,7 +13,7 @@ function CreatePostPage({
     userInformation,
 }) {
     const navigate = useNavigate();
-    const [setPostSuccessful] = useState(false);
+    const [postSuccessful, setPostSuccessful] = useState(false);
 
     const createPost = useCallback((e) => {
             e.preventDefault();
@@ -35,7 +35,7 @@ function CreatePostPage({
                     userId: userId,
                     userName,
                 });
-                console.log("Document written with ID: ", docRef.id);
+    
                 setPostSuccessful(true);
             } catch (e) {
                 console.error("Error adding document: ", e);     
@@ -43,7 +43,7 @@ function CreatePostPage({
         },
         [setPostSuccessful, app, userInformation]
     );
-    console.log({ userInformation });
+   
     useEffect(() => {
         if (!isLoggedIn && !isLoading) navigate("/login");
     }, [isLoading, isLoggedIn, navigate]);
@@ -51,14 +51,15 @@ function CreatePostPage({
     return (
         <>
         <div className="CreatePostPage">
+            <Header
+                isLoggedIn={isLoggedIn}
+                setLoggedIn={setLoggedIn}
+                setUserInformation={setUserInformation}
+            />
             <div className='CreatePostWrapper'>
-                <Header
-                    isLoggedIn={isLoggedIn}
-                    setLoggedIn={setLoggedIn}
-                    setUserInformation={setUserInformation}
-                />
                 <h1>Create Post</h1>
                 <CreatePostForm createPost={createPost}/>
+                <p>{postSuccessful && "Post successful!"}</p>
                 
             </div>
         </div>
