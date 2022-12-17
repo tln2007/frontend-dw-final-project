@@ -44,7 +44,7 @@ function UserProfilePage({ app, isLoading, isLoggedIn, userInformation, setIsLog
             />
 
                 <div className='BakeryName'>
-                    <strong>{userInformation.displayName}'s Bakery</strong>
+                    <strong>{userInformation.displayName}'s Bakery &#129473;</strong>
                     <h2>Posts</h2>
                 </div>
                 <p>

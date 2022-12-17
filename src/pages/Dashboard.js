@@ -41,9 +41,11 @@ function DashboardPage({
                 isLoggedIn={isLoggedIn}
                 setLoggedIn={setLoggedIn}
                 setUserInformation={setUserInformation}
+               
             />
-          
+
             <div className="PageWrapper">
+          
                 <div className="ImagePostWrapper">
                     {postData && postData.map((post) => (
                         <ImagePost
@@ -55,7 +57,6 @@ function DashboardPage({
                         userName={post.userName}
                         />
                     ))}
-                 
                 </div>
             </div>
         </div>
