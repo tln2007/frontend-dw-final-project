@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { getAuth, signOut } from "firebase/auth";
+//import { getAuth, signOut } from "firebase/auth";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import ImagePost from "../components//ImagePost";
 import Header from "../components/Header";
@@ -16,7 +16,7 @@ function UserProfilePage({ app, isLoading, isLoggedIn, userInformation, setIsLog
         const querySnapshot = await getDocs(collection(db, "posts"));
         const data = [];
         querySnapshot.forEach((doc) => {
-            if (doc.data().userId == userInformation.uid){
+            if (doc.data().userId === userInformation.uid){
                 data.push(doc.data());
             }
         });
@@ -27,12 +27,10 @@ function UserProfilePage({ app, isLoading, isLoggedIn, userInformation, setIsLog
         if(!isLoggedIn && !isLoading) return navigate('/login'); //if NOT logged in, nav to login
     }, [isLoading, isLoggedIn, navigate]) //dependencies
 
-    useEffect(() => {
+    useEffect((queryData) => {
         if (!app) return;
         queryData(app).then(setPostData);
     }, [app]);
-
-
 
     return (
         <>

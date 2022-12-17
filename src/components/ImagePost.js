@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function ImagePost({ ingredients, instructions, servings, title, userName, userId }) {
     return (
