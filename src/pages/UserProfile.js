@@ -28,10 +28,10 @@ function UserProfilePage({ app, isLoading, isLoggedIn, userInformation, setIsLog
         if(!isLoggedIn && !isLoading) return navigate('/login'); //if NOT logged in, nav to login
     }, [isLoading, isLoggedIn, navigate]) //dependencies
 
-    useEffect((queryData) => {
+    useEffect(() => {
         if (!app) return;
         queryData(app).then(setPostData);
-    }, [app]);
+    }, [app, queryData]);
 
     return (
         <>
